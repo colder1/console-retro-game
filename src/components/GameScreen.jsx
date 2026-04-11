@@ -1,6 +1,7 @@
 import React from 'react'
 
 function GameScreen({ myPokeSelection, pcPokeSelection }) {
+  console.log(myPokeSelection)
   return (
     <>
       <div className="w-[440px] h-[250px] border-y-4 border-solid">
@@ -14,6 +15,7 @@ function GameScreen({ myPokeSelection, pcPokeSelection }) {
                 className="w-25 h-25"
               />
               <p>{pokemon.name}</p>
+              <p>{pokemon.moves[0].move.name}</p>
             </div>
           ))}
           <h2>VS</h2>
