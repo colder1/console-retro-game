@@ -50,16 +50,14 @@ function App() {
   const [pcPokeSelection, setPcPokeSelection] = useState([]);
 
   const handleDirection = (direction) => {
-    if (direction === 'right' && position + 1 < 101) {
+    if (direction === 'right' && position < 100) {
       setPosition((prev) => prev + 1);
-    } else if(direction === 'left' && position - 1 > 0){
+    } else if (direction === 'left' && position > 1) {
       setPosition((prev) => prev - 1);
-    } else if(direction === 'down' && position + 4 < 101){
+    } else if (direction === 'down' && position + 4 <= 100) {
       setPosition((prev) => prev + 4);
-    }else if(direction === 'up' && position - 4 > 0){
+    } else if (direction === 'up' && position - 4 >= 1) {
       setPosition((prev) => prev - 4);
-    }else{
-      setPosition(1);
     }
   };
 
@@ -81,6 +79,11 @@ function App() {
     computerSelection();
   }
 
+  const handleBack =() => {
+    setMyPokeSelection([]);
+    setPcPokeSelection([]);
+  }
+
   console.log("my", myPokeSelection.length, myPokeSelection)
   console.log("pc", pcPokeSelection.length, pcPokeSelection)
 
@@ -100,7 +103,9 @@ return (
         )}
       </div>
 
-      <RightControl handleSelection={handleSelection} />
+      <RightControl 
+        handleSelection={handleSelection} 
+        handleBack={handleBack}/>
     </div>
 
 

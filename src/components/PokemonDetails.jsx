@@ -33,7 +33,7 @@ const PokemonDetails = ({ actual }) => {
                 
                 <div className="space-y-1 max-h-[200px] overflow-y-auto pr-2">
                     {pokemon.moves?.slice(0, 10).map((m, i) => (
-                        <div key={i} className="flex justify-between bg-gray-100 p-2 rounded border-l-4 border-red-500">
+                        <div key={i} className="flex justify-between bg-gray-100 p-2 rounded border-l-4 border-cyan-500">
                             <span className="capitalize font-medium text-sm">{m.move?.name}</span>
                             <span className="bg-neutral-800 text-white px-2 rounded text-xs flex items-center font-mono">
                                 ATK: {m.attack}
