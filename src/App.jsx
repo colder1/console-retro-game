@@ -74,6 +74,7 @@ function App() {
   }
 
   const handleSelection = () => {
+  
     const selectPokemon = pokemones.filter((p) => p.id === position)
     setMyPokeSelection(selectPokemon);
     computerSelection();
