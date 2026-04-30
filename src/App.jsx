@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import LeftControl from './components/LeftControl';
 import RightControl from './components/RightControl';
-import Screen from './components/Pantalla';
+import Screen from './components/Screen';
 import GameScreen from './components/GameScreen';
 import useFetch from './hooks/useFetch';
 
